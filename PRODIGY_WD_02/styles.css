@@ -1,0 +1,101 @@
+body {
+    font-family: "Orbitron", sans-serif;
+    text-align: center;
+    background: radial-gradient(circle, #0f0f0f, #080808);
+    color: #0ff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px #0ff;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.stopwatch {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #0ff;
+    text-shadow: 0px 0px 20px #0ff;
+    letter-spacing: 3px;
+    animation: neonGlow 1.5s infinite alternate;
+}
+
+@keyframes neonGlow {
+    from { text-shadow: 0px 0px 15px #0ff; }
+    to { text-shadow: 0px 0px 30px #0ff; }
+}
+.buttons button {
+    margin: 10px;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    box-shadow: 0px 5px 20px rgba(0, 255, 255, 0.5);
+    position: relative;
+}
+#startStop {
+    background: #00ffcc;
+    color: black;
+}
+
+#reset {
+    background: #ff0066;
+    color: black;
+}
+
+#lap {
+    background: #ffcc00;
+    color: black;
+}
+
+.buttons button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px white;
+}
+
+.buttons button:active {
+    transform: scale(0.9);
+}
+
+#laps {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#laps li {
+    font-size: 18px;
+    background: rgba(0, 255, 255, 0.2);
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    color: #0ff;
+    text-shadow: 0px 0px 5px #0ff;
+    animation: slideIn 0.5s ease-in-out;
+}
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
